@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Définition des polices et couleurs */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mise en forme du header */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Section principale */
+section {
+    margin-bottom: 30px;
+}
+
+/* Mise en forme des titres principaux */
+h1 {
+    color: #333;
+    font-size: 2.2em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Mise en forme des sous-titres */
+h2 {
+    color: #555;
+    font-size: 1.6em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Liste des compétences et autres éléments */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+ul li {
+    font-size: 1.1em;
+    margin-bottom: 7px;
+    padding-left: 25px;  /* Augmenter l'espacement à gauche pour que le texte commence après les puces */
+    position: relative;
+}
+
+/* Ajouter une icône devant chaque élément de la liste */
+ul li::before {
+    content: '•';
+    color: #3498db;
+    position: absolute;
+    left: 0;  /* Positionner la puce à gauche */
+    top: 0;
+    font-size: 1.5em;
+}
+
+/* Mise en forme des liens */
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a.linked {
+    color: purple;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Ajout d'une bordure et d'un effet au survol des sections */
+section:hover {
+    border: 1px solid #3498db;
+    background-color: #ecf7ff;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Style du footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #3498db;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries pour les petits écrans */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    ul li {
+        font-size: 1em;
+    }
+}
