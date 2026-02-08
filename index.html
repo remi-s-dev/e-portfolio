@@ -1,53 +1,340 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>R. Simonetto - CV & E-Portfolio</title>
-        <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS externe -->
-    </head>
-    <body id="top">
-        <header>
-            <h1>Rémi Simonetto</h1>
-            <p>Étudiant en première année de BTS Informatique | Passionné de technologie et toujours à la recherche de nouveaux défis.</p>
-            <a href="https://www.linkedin.com/in/rémi-simonetto-2434b3247/" class="linked">Mon LinkedIn</a>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rémi Simonetto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Easter Egg: Konami Code -->
+    <div id="konami-easter-egg" class="hidden">
+        <div class="achievement-notification">
+            <div class="achievement-icon">🎮</div>
+            <div class="achievement-content">
+                <h3>Achievement Unlocked!</h3>
+                <p>Konami Code Master</p>
+                <div class="achievement-xp">+100 XP</div>
+            </div>
+        </div>
+    </div>
 
-        <navbar>
-                <a href="index.html">Page d'accueil</a> |
-                <a href="competences.html">Mes compétences</a> |
-                <a href="situations.html">Situations professionnelles</a> |
-                <a href="certifs.html">Mes Certifications</a> |
-                <a href="veille.html">Ma veille</a>
-        </navbar>
+    <!-- Progress Bar -->
+    <div class="progress-indicator">
+        <div class="progress-fill" id="reading-progress"></div>
+    </div>
 
-        <h1> Présentation</h1>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Portfolio</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">
+                    <span class="nav-icon">🏠</span>
+                    <span>Accueil</span>
+                </a>
+                <a href="projets.html" class="nav-link">
+                    <span class="nav-icon">💼</span>
+                    <span>Projets</span>
+                </a>
+                <a href="veille.html" class="nav-link">
+                    <span class="nav-icon">📡</span>
+                    <span>Veille</span>
+                </a>
+                <a href="stages.html" class="nav-link">
+                    <span class="nav-icon">🎯</span>
+                    <span>Stages</span>
+                </a>
+            </div>
 
-        <h2>Parcours scolaire</h2>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-        <p>
-            J'ai toujours beaucoup apprécié le monde de l'informatique et ai passé une bonne partie de ma vie à utiliser des ordinateurs pour faire tout plein de choses. Je me suis donc décidé à suivre des études générales au lycée, et j'ai pris comme options les options suivantes :
-            <ul>
-                <li>Physique-chimie</li>
-                <li>Mathématiques</li>
-                <li>SVT</li>
-            </ul>
-            J'ai eu mon baccalauréat mention bien et je suis ensuite allé en licence informatique à l'Université Paris-Cité mais je n'ai pas aimé l'univers de la faculté, j'ai donc arrêté la licence pour me diriger vers un BTS SIO au sein duquel je suis actuellement en train d'étudier.
-        </p>
+    <!-- Présentation -->
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="greeting">
+                        Bonjour, je suis
+                    </div>
+                    <h1 class="hero-title">
+                        Rémi <span class="highlight">Simonetto</span> <span class="typing-cursor">|</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Développeur Full-Stack | BTS SIO SLAM
+                    </p>
+                    <p class="hero-description">
+                        Passionné par l'univers informatique et le gaming, je souhaite créer des applications 
+                        performantes avec un souci du détail et de l'expérience utilisateur.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#about" class="btn btn-primary">
+                            Découvrir mon profil
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Me contacter
+                        </a>
+                    </div>
 
-        <h2>Mon tableau de synthèse</h2>
-        <iframe src="tableau_synthese.pdf" width="80%" height="1200px" title="Mon tableau de synthèse"></iframe>
-        <h2>Mes hobbies / passions</h2>
-        <ul>
-            <li>Musculation en salle</li>
-            <li>Jeux vidéo (MOBAs, Battle Royale, Bac à sable, FPS...)</li>
-            <li>Musique (Rock, métal, pop)</li>
-            <li>Séries (Animés, science-fiction, drama...)</li>
-            <li>Réseaux sociaux (Twitch, YouTube, Reddit...)</li>
-        </ul>
+                    <!-- Stats subtiles style gaming -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">5+</div>
+                            <div class="stat-label">Projets</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">2</div>
+                            <div class="stat-label">Stages</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">10+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                </div>
 
-        <footer>
-            <p>Rémi Simonetto, BTS SIO1A | <a href="#top">Revenir en haut</a></p>
-        </footer>
-    </body>
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="card-glow"></div>
+                        <div class="profile-image">
+                            <div class="profile-placeholder">
+                                <span>👨‍💻</span>
+                            </div>
+                        </div>
+                        <!--<div class="profile-status">
+                            <span class="status-dot"></span>
+                            Disponible pour une alternance
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// À propos</span>
+                <h2 class="section-title">Qui suis-je ?</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Actuellement étudiant au lycée Turgot en <strong>BTS SIO</strong>
+                        (Services Informatiques aux Organisations)<strong> option SLAM</strong>
+                        (Solutions Logicielles et Applications Métiers), qui est en gros un BTS
+                         orienté développement web et applicatif.
+                    </p>
+                    <p>
+                        Mon intérêt pour l'univers du jeu vidéo m'a naturellement orienté
+                        vers la programmation et donné envie de proposer des expériences uniques.
+                    </p>
+                    <p>
+                        Je cherche constamment à apprendre de nouvelles technologies et à améliorer mes compétences
+                        pour relever de nouveaux défis.
+                    </p>
+                    <p>
+                        Mon objectif professionnel est de contribuer à des projets innovants et 
+                        de continuer à évoluer dans le domaine du développement logiciel.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎓</span>
+                            <div>
+                                <strong>Formation</strong>
+                                <p>BTS SIO SLAM - 2024-2026 - Lycée Turgot (Paris) </p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎮</span>
+                            <div>
+                                <strong>Passion</strong>
+                                <p>Gaming & Développement</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">💡</span>
+                            <div>
+                                <strong>État d'esprit</strong>
+                                <p>Curieux, rigoureux & déterminé</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-skills">
+                    <h3>Compétences principales</h3>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">🐘</div>
+                            <div class="skill-info">
+                                <h4>PHP</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 75%"></div>
+                                </div>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">🗄️</div>
+                            <div class="skill-info">
+                                <h4>SQL</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 80%"></div>
+                                </div>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">☕</div>
+                            <div class="skill-info">
+                                <h4>Java</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 75%"></div>
+                                </div>
+                                <span class="skill-level">Intermédiaire</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">🌐</div>
+                            <div class="skill-info">
+                                <h4>HTML/CSS</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 60%"></div>
+                                </div>
+                                <span class="skill-level">Intermédiaire</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">⚡</div>
+                            <div class="skill-info">
+                                <h4>JavaScript</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 55%"></div>
+                                </div>
+                                <span class="skill-level">Intermédiaire</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">🐍</div>
+                            <div class="skill-info">
+                                <h4>Python</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress:65%"></div>
+                                </div>
+                                <span class="skill-level">Intermédiaire</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Contact</span>
+                <h2 class="section-title">Restons connectés</h2>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-text">
+                        N'hésitez pas à me contacter pour discuter de projets, d'opportunités 
+                        professionnelles ou simplement pour échanger sur le développement et le gaming !
+                    </p>
+
+                    <div class="contact-links">
+                        <a href="mailto:votre.email@exemple.fr" class="contact-link" target="_blank">
+                            <div class="contact-link-icon">📧</div>
+                            <div class="contact-link-content">
+                                <strong>Email</strong>
+                                <span>remisimonetto.turgot@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/votreprofil" class="contact-link" target="_blank">
+                            <div class="contact-link-icon">💻</div>
+                            <div class="contact-link-content">
+                                <strong>GitHub</strong>
+                                <span>@votreprofil</span>
+                            </div>
+                        </a>
+
+                        <a href="https://linkedin.com/in/votreprofil" class="contact-link" target="_blank">
+                            <div class="contact-link-icon">💼</div>
+                            <div class="contact-link-content">
+                                <strong>LinkedIn</strong>
+                                <span>Votre Profil</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-cta-card">
+                    <div class="cta-icon">🚀</div>
+                    <h3>Prêt à collaborer ?</h3>
+                    <p>Je suis ouvert à toute opportunités et projets intéressants.</p>
+                    <a href="mailto:remisimonetto.turgot@gmail.com" class="btn btn-primary">
+                        Envoyez-moi un message
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Portfolio - Tous droits réservés - Rémi Simonetto</p>
+                <a href="#top" class="back-to-top">
+                    <span class="back-to-top-icon">⬆️</span>
+                    Revenir en haut
+                </a>
+                <p class="easter-egg-hint">
+                    <span class="hint-icon">🎮</span>
+                    Psst... Essaye le Konami Code
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

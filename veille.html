@@ -1,27 +1,305 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>R. Simonetto - CV & E-Portfolio</title>
-        <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS externe -->
-    </head>
-    <body>
-        <navbar>
-                <a href="index.html">Page d'accueil</a> |
-                <a href="competences.html">Mes compétences</a> |
-                <a href="situations.html">Situations professionnelles</a> |
-                <a href="certifs.html">Mes Certifications</a> |
-                <a href="veille.html">Ma veille</a>
-        </navbar>
-        
-        <h1>Veille technologique</h1>
-        <ul>
-            <li>Veille technologique sur le jeu-vidéo</li>
-            <li>Freeplane - Carte heuristique <br><img src="veille_techno.png"></li>
-        </ul>
-        <footer>
-            <p>Rémi Simonetto, BTS SIO1A | <a href="#top">Revenir en haut</a></p>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Easter Egg -->
+    <div id="konami-easter-egg" class="hidden">
+        <div class="achievement-notification">
+            <div class="achievement-icon">🎮</div>
+            <div class="achievement-content">
+                <h3>Achievement Unlocked!</h3>
+                <p>Konami Code Master</p>
+                <div class="achievement-xp">+100 XP</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-indicator">
+        <div class="progress-fill" id="reading-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Portfolio</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    <span>Accueil</span>
+                </a>
+                <a href="projets.html" class="nav-link">
+                    <span class="nav-icon">💼</span>
+                    <span>Projets</span>
+                </a>
+                <a href="veille.html" class="nav-link active">
+                    <span class="nav-icon">📡</span>
+                    <span>Veille</span>
+                </a>
+                <a href="stages.html" class="nav-link">
+                    <span class="nav-icon">🎯</span>
+                    <span>Stages</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section-tag">// Veille</span>
+            <h1 class="page-title">Veille Technologique</h1>
+            <p class="page-description">
+                Ma démarche de veille et les actualités que je suis dans le domaine du développement
+            </p>
+        </div>
+    </section>
+
+    <!-- Themes Section -->
+    <section class="section themes-section">
+        <div class="container">
+            <h2 class="section-title">Thématiques suivies</h2>
+            <div class="themes-grid">
+                <div class="theme-card">
+                    <div class="theme-icon">🤖</div>
+                    <h3>Intelligence Artificielle</h3>
+                    <p>IA, Machine Learning et leurs applications en développement</p>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">🔒</div>
+                    <h3>Cybersécurité</h3>
+                    <p>Sécurité des applications et protection des données</p>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">☁️</div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Technologies cloud, conteneurs et automatisation</p>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">⚡</div>
+                    <h3>Frameworks Web</h3>
+                    <p>Nouvelles tendances et frameworks modernes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="section articles-section">
+        <div class="container">
+            <h2 class="section-title">Articles récents</h2>
+            
+            <div class="articles-list">
+                <!-- Article 1 -->
+                <article class="article-card">
+                    <div class="article-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">Jan</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category ai">IA</span>
+                            <span class="article-read-time">5 min de lecture</span>
+                        </div>
+                        <h3 class="article-title">L'évolution des modèles de langage en 2025</h3>
+                        <p class="article-excerpt">
+                            Analyse des nouvelles capacités des LLM et leur impact sur le développement 
+                            logiciel. Comment ces outils transforment notre façon de coder.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-source">🔗 OpenAI Blog</span>
+                            <a href="#" class="article-link">Lire l'article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card">
+                    <div class="article-date">
+                        <span class="date-day">08</span>
+                        <span class="date-month">Jan</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category security">Sécurité</span>
+                            <span class="article-read-time">8 min de lecture</span>
+                        </div>
+                        <h3 class="article-title">Vulnérabilités critiques détectées</h3>
+                        <p class="article-excerpt">
+                            Découverte de failles de sécurité majeures dans plusieurs bibliothèques JavaScript. 
+                            Recommandations et bonnes pratiques pour sécuriser vos projets.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-source">🔗 Security Weekly</span>
+                            <a href="#" class="article-link">Lire l'article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card">
+                    <div class="article-date">
+                        <span class="date-day">02</span>
+                        <span class="date-month">Jan</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category cloud">Cloud</span>
+                            <span class="article-read-time">6 min de lecture</span>
+                        </div>
+                        <h3 class="article-title">Kubernetes : Nouveautés 2025</h3>
+                        <p class="article-excerpt">
+                            Tour d'horizon des nouvelles fonctionnalités de Kubernetes et leur impact 
+                            sur l'orchestration de conteneurs et la scalabilité.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-source">🔗 Kubernetes Blog</span>
+                            <a href="#" class="article-link">Lire l'article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card">
+                    <div class="article-date">
+                        <span class="date-day">28</span>
+                        <span class="date-month">Déc</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category web">Web</span>
+                            <span class="article-read-time">10 min de lecture</span>
+                        </div>
+                        <h3 class="article-title">React vs Vue : Comparatif 2025</h3>
+                        <p class="article-excerpt">
+                            Analyse comparative des deux frameworks majeurs. Performances, écosystème, 
+                            et critères de choix pour vos nouveaux projets.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-source">🔗 Dev.to</span>
+                            <a href="#" class="article-link">Lire l'article →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sources Section -->
+    <section class="section sources-section">
+        <div class="container">
+            <h2 class="section-title">Mes sources</h2>
+            <div class="sources-grid">
+                <div class="source-card">
+                    <div class="source-icon">📰</div>
+                    <h4>Blogs & Sites</h4>
+                    <ul>
+                        <li>Dev.to</li>
+                        <li>Medium</li>
+                        <li>Smashing Magazine</li>
+                        <li>CSS-Tricks</li>
+                    </ul>
+                </div>
+                <div class="source-card">
+                    <div class="source-icon">🎥</div>
+                    <h4>Vidéos & Podcasts</h4>
+                    <ul>
+                        <li>YouTube (Fireship, Traversy)</li>
+                        <li>Syntax.fm</li>
+                        <li>Tech Talks</li>
+                    </ul>
+                </div>
+                <div class="source-card">
+                    <div class="source-icon">🐦</div>
+                    <h4>Réseaux Sociaux</h4>
+                    <ul>
+                        <li>Twitter/X (Dev Tech)</li>
+                        <li>LinkedIn</li>
+                        <li>Reddit (r/programming)</li>
+                    </ul>
+                </div>
+                <div class="source-card">
+                    <div class="source-icon">📧</div>
+                    <h4>Newsletters</h4>
+                    <ul>
+                        <li>JavaScript Weekly</li>
+                        <li>Python Weekly</li>
+                        <li>Hacker News Digest</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="section methodology-section">
+        <div class="container">
+            <h2 class="section-title">Ma méthodologie</h2>
+            <div class="methodology-content">
+                <div class="method-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Collecte quotidienne</h4>
+                        <p>Consultation de mes sources principales chaque matin (30 minutes)</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Sélection et tri</h4>
+                        <p>Identification des articles pertinents selon mes thématiques de veille</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Analyse approfondie</h4>
+                        <p>Lecture détaillée et prise de notes sur les sujets importants</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Archivage & Partage</h4>
+                        <p>Sauvegarde personnelle et partage avec ma communauté d'apprentissage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Portfolio - Tous droits réservés</p>
+                <p class="easter-egg-hint">
+                    <span class="hint-icon">🎮</span>
+                    Psst... Essaye le Konami Code
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

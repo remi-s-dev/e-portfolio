@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stages - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Easter Egg -->
+    <div id="konami-easter-egg" class="hidden">
+        <div class="achievement-notification">
+            <div class="achievement-icon">🎮</div>
+            <div class="achievement-content">
+                <h3>Achievement Unlocked!</h3>
+                <p>Konami Code Master</p>
+                <div class="achievement-xp">+100 XP</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-indicator">
+        <div class="progress-fill" id="reading-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Portfolio</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    <span>Accueil</span>
+                </a>
+                <a href="projets.html" class="nav-link">
+                    <span class="nav-icon">💼</span>
+                    <span>Projets</span>
+                </a>
+                <a href="veille.html" class="nav-link">
+                    <span class="nav-icon">📡</span>
+                    <span>Veille</span>
+                </a>
+                <a href="stages.html" class="nav-link active">
+                    <span class="nav-icon">🎯</span>
+                    <span>Stages</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section-tag">// Stages</span>
+            <h1 class="page-title">Expériences Professionnelles</h1>
+            <p class="page-description">
+                Mon parcours en entreprise et les compétences développées durant mes stages
+            </p>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section timeline-section">
+        <div class="container">
+            <div class="timeline">
+                
+                <!-- Stage 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="stage-card">
+                            <div class="stage-header">
+                                <div class="stage-company">
+                                    <div class="company-logo">💍</div>
+                                    <div class="company-info">
+                                        <h3>Atelier Benoit</h3>
+                                        <p>📍 Paris, en distanciel</p>
+                                    </div>
+                                </div>
+                                <div class="stage-period">
+                                    <span class="period-year">2025-2026</span>
+                                    <span class="period-duration">8 semaines</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stage-role">
+                                <h4>Développeur python / data-sciences / Machine Learning</h4>
+                                <span class="role-type">Stage de 2ème année</span>
+                            </div>
+
+                            <div class="stage-body">
+                                <div class="stage-section">
+                                    <h5>Missions principales</h5>
+                                    <ul class="missions-list">
+                                        <li>Mettre en place une solution de Web Scraping de pierres précieuses</li>
+                                        <li>Développer des scripts de normalisation et d'import en base de données</li>
+                                        <li>Modéliser une base de données pouvant contenir les données scrapées</li>
+                                        <li>Création d'un dashboard pour visualiser les données</li>
+                                        <li>Réaliser un script d'estimation de prix de gemmes</li>
+                                    </ul>
+                                </div>
+
+                                <div class="stage-section">
+                                    <h5>Technologies utilisées</h5>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Scikit-Learn</span>
+                                        <span class="tech-tag">Pandas</span>
+                                        <span class="tech-tag">StreamLit</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">WebScraper.io</span>
+                                    </div>
+                                </div>
+
+                                <div class="stage-section">
+                                    <h5>Compétences acquises</h5>
+                                    <div class="skills-acquired">
+                                        <div class="skill-item">
+                                            <span class="skill-icon">🐍</span>
+                                            <span>Développement Backend (Python)</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-icon">🗄️</span>
+                                            <span>Modélisation, gestion de bases de données</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-icon">📊</span>
+                                            <span>Principes de data science</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-icon">🤖</span>
+                                            <span>Principes de machine learning</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-icon">🌐</span>
+                                            <span>Web scraping</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-icon">👥</span>
+                                            <span>Travail en équipe (méthode Agile hybride)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stage-achievements">
+                                    <div class="achievement-item">
+                                        <span class="achievement-badge">🏆</span>
+                                        <span>Application déployée en production</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="stage-card">
+                            <div class="stage-header">
+                                <div class="stage-company">
+                                    <div class="company-logo">💼</div>
+                                    <div class="company-info">
+                                        <h3>Lycée polyvalent Élisa Lemonnier</h3>
+                                        <p>📍 Paris</p>
+                                    </div>
+                                </div>
+                                <div class="stage-period">
+                                    <span class="period-year">2025</span>
+                                    <span class="period-duration">8 semaines</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stage-role">
+                                <h4>Support informatique</h4>
+                                <span class="role-type">Stage de 1ère année</span>
+                            </div>
+
+                            <div class="stage-body">
+                                <div class="stage-section">
+                                    <h5>Missions principales</h5>
+                                    <ul class="missions-list">
+                                        <li>Découverte du milieu professionnel du développement</li>
+                                        <li>Aide à l'utilisateur</li>
+                                        <li>Tests et débogage de postes, machines</li>
+                                        <li>Ticketing</li>
+                                    </ul>
+                                </div>
+
+                                <div class="stage-section">
+                                    <h5>Technologies utilisées</h5>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">CSS3</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">jQuery</span>
+                                        <span class="tech-tag">Git</span>
+                                    </div>
+                                </div>
+
+                                <div class="stage-section">
+                                    <h5>Compétences acquises</h5>
+                                    <div class="skills-acquired">
+                                        <div class="skill-item">
+                                            <span class="skill-icon">🌐</span>
+                                            <span>Développement Frontend (HTML/CSS/JS)</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-icon">🔧</span>
+                                            <span>Méthodologie Agile & Scrum</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-icon">📝</span>
+                                            <span>Documentation technique</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-icon">🐛</span>
+                                            <span>Débogage et tests</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stage-achievements">
+                                    <div class="achievement-item">
+                                        <span class="achievement-badge">🎓</span>
+                                        <span>Première expérience professionnelle réussie</span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <span class="achievement-badge">🤝</span>
+                                        <span>Bonne intégration dans l'équipe</span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <span class="achievement-badge">✨</span>
+                                        <span>Déclaré "meilleur stagiaire" par le tuteur</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Overview -->
+    <section class="section skills-overview-section">
+        <div class="container">
+            <h2 class="section-title">Bilan de compétences</h2>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3>💻 Compétences Techniques</h3>
+                    <div class="progress-items">
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Développement Web</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Base de données</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Programmation orientée objet</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🤝 Compétences Transversales</h3>
+                    <div class="progress-items">
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Travail en équipe</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Communication</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Autonomie</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Portfolio - Tous droits réservés - Rémi Simonetto</p>
+                <a href="#top" class="back-to-top">
+                    <span class="back-to-top-icon">⬆️</span>
+                    Revenir en haut
+                </a>
+                <p class="easter-egg-hint">
+                    <span class="hint-icon">🎮</span>
+                    Psst... Essaye le Konami Code
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

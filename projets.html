@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Easter Egg -->
+    <div id="konami-easter-egg" class="hidden">
+        <div class="achievement-notification">
+            <div class="achievement-icon">🎮</div>
+            <div class="achievement-content">
+                <h3>Achievement Unlocked!</h3>
+                <p>Konami Code Master</p>
+                <div class="achievement-xp">+100 XP</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-indicator">
+        <div class="progress-fill" id="reading-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Portfolio</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    <span>Accueil</span>
+                </a>
+                <a href="projets.html" class="nav-link active">
+                    <span class="nav-icon">💼</span>
+                    <span>Projets</span>
+                </a>
+                <a href="veille.html" class="nav-link">
+                    <span class="nav-icon">📡</span>
+                    <span>Veille</span>
+                </a>
+                <a href="stages.html" class="nav-link">
+                    <span class="nav-icon">🎯</span>
+                    <span>Stages</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section-tag">// Projets</span>
+            <h1 class="page-title">Mes Réalisations</h1>
+            <p class="page-description">
+                Découvrez les projets que j'ai réalisés durant ma formation et en autonomie
+            </p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">Applications</button>
+                <button class="filter-btn" data-filter="bdd">Base de données</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="section projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                
+                <!-- Projet 1 -->
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">🛒</span>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project">Voir le projet →</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Site E-Commerce</h3>
+                            <span class="project-status completed">Terminé</span>
+                        </div>
+                        <p class="project-description">
+                            Développement d'une plateforme e-commerce complète avec gestion de panier, 
+                            système de paiement et interface d'administration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Bootstrap</span>
+                        </div>
+                        <div class="project-meta">
+                            <span>⏱️ 3 mois</span>
+                            <span>👥 Équipe de 3</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 2 -->
+                <article class="project-card" data-category="app">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">📦</span>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project">Voir le projet →</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Application de Gestion</h3>
+                            <span class="project-status completed">Terminé</span>
+                        </div>
+                        <p class="project-description">
+                            Application desktop pour la gestion de stock et suivi des commandes 
+                            d'une petite entreprise locale.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Tkinter</span>
+                            <span class="tech-badge">SQLite</span>
+                        </div>
+                        <div class="project-meta">
+                            <span>⏱️ 2 mois</span>
+                            <span>👤 Solo</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 3 -->
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">🎮</span>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project">Voir le projet →</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Mini-Jeu Web</h3>
+                            <span class="project-status completed">Terminé</span>
+                        </div>
+                        <p class="project-description">
+                            Création d'un jeu de type "Snake" revisité avec système de scores 
+                            en ligne et classements des joueurs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Canvas</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">MongoDB</span>
+                        </div>
+                        <div class="project-meta">
+                            <span>⏱️ 1 mois</span>
+                            <span>👥 Équipe de 2</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 4 -->
+                <article class="project-card" data-category="bdd">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">📚</span>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project">Voir le projet →</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Système de Base de Données</h3>
+                            <span class="project-status completed">Terminé</span>
+                        </div>
+                        <p class="project-description">
+                            Conception et implémentation d'une base de données relationnelle 
+                            pour la gestion d'une médiathèque municipale.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">UML</span>
+                        </div>
+                        <div class="project-meta">
+                            <span>⏱️ 6 semaines</span>
+                            <span>👥 Équipe de 4</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 5 - En cours -->
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">⚡</span>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project">En développement...</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">API REST</h3>
+                            <span class="project-status inprogress">En cours</span>
+                        </div>
+                        <p class="project-description">
+                            Développement d'une API REST pour une application mobile de gestion 
+                            de tâches avec authentification JWT.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">JWT</span>
+                            <span class="tech-badge">MongoDB</span>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-label">
+                                <span>Progression</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar-fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 6 - À venir -->
+                <article class="project-card upcoming" data-category="app">
+                    <div class="project-image">
+                        <div class="project-placeholder locked">
+                            <span class="project-icon">🔒</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Projet mystère</h3>
+                            <span class="project-status upcoming">À venir</span>
+                        </div>
+                        <p class="project-description">
+                            Un nouveau projet passionnant sera bientôt disponible. 
+                            Restez connecté pour découvrir ce nouveau challenge !
+                        </p>
+                        <div class="unlock-message">
+                            <span>🎮 Déblocage prochain</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Portfolio - Tous droits réservés</p>
+                <p class="easter-egg-hint">
+                    <span class="hint-icon">🎮</span>
+                    Psst... Essaye le Konami Code
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
