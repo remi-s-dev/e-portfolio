@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WR Clicker - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-indicator">
+        <div class="progress-fill" id="reading-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Portfolio</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    <span>Accueil</span>
+                </a>
+                <a href="projets.html" class="nav-link active">
+                    <span class="nav-icon">💼</span>
+                    <span>Projets</span>
+                </a>
+                <a href="veille.html" class="nav-link">
+                    <span class="nav-icon">📡</span>
+                    <span>Veille</span>
+                </a>
+                <a href="stages.html" class="nav-link">
+                    <span class="nav-icon">🎯</span>
+                    <span>Stages</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header du Projet -->
+    <section class="project-hero" id="top">
+        <div class="container">
+            <a href="projets.html" class="back-link">
+                ← Retour aux projets
+            </a>
+            
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <h1 class="project-hero-title">WR Clicker</h1>
+                    <p class="project-hero-subtitle">
+                        Un jeu de type clicker/idle avec système de progression, sauvegarde et classement des joueurs
+                    </p>
+
+                    <div class="tech-stack-hero">
+                        <span class="tech-badge-hero">HTML</span>
+                        <span class="tech-badge-hero">PHP</span>
+                        <span class="tech-badge-hero">JavaScript</span>
+                        <span class="tech-badge-hero">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="section screenshots-section">
+        <div class="container">
+            <h2 class="section-title">
+                Aperçu du Jeu
+            </h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-item large">
+                    <img src="wrclicker1.png" alt="WR Clicker - Interface principale" />
+                    <div class="screenshot-caption">
+                        <h4>Interface de jeu</h4>
+                        <p>Vue principale avec le score et les améliorations disponibles</p>
+                    </div>
+                </div>
+                
+                <div class="screenshot-item large">
+                    <img src="wrclicker2.png" alt="WR Clicker - Progression avancée" />
+                    <div class="screenshot-caption">
+                        <h4>Progression avancée</h4>
+                        <p>Le jeu en action avec un score élevé et plusieurs améliorations achetées</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation du Projet -->
+    <section class="section project-overview">
+        <div class="container">
+            <h2 class="section-title">
+                Documentation du Projet
+            </h2>
+            <iframe src="Walid_Rémi_Cahier_des_Charges_projet_dev.pdf" width="100%" height="1200px"></iframe>
+            <br>
+            <br>
+            <br>
+            <h2 class="section-title">
+                Diagramme de Gantt
+            </h2>
+            <img src="diagramme_de_gantt_WR-CLICKER.png" width="100%" height="100%">
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Portfolio - Tous droits réservés - Rémi Simonetto</p>
+                <a href="#top" class="back-to-top">
+                    <span class="back-to-top-icon">⬆️</span>
+                    Revenir en haut
+                </a>
+                <p class="easter-egg-hint">
+                    <span class="hint-icon">🎮</span>
+                    Psst... Essaye le Konami Code
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
