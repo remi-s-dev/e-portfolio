@@ -485,7 +485,7 @@ code {
     }
     100% {
         opacity: 0;
-        transform: translateX(-50%) translateY(2.5px);
+        transform: translateX(-50%) translateY(12px);
     }
 }
 
@@ -585,9 +585,9 @@ code {
    ABOUT SECTION
    ======================================== */
 .about-content {
-    grid-template-columns: 1fr;
-    max-width: 800px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
 }
 
 .about-text p {
@@ -699,6 +699,149 @@ code {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
+}
+
+/* ========================================
+   MON PARCOURS SECTION
+   ======================================== */
+.parcours-section {
+    background: var(--bg-secondary);
+}
+
+.parcours-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-xl);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.parcours-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+}
+
+.parcours-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.parcours-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 2rem;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-secondary);
+    border: 4px solid var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--bg-secondary);
+}
+
+.parcours-item.current::before {
+    background: var(--primary);
+    box-shadow: 0 0 0 4px var(--bg-secondary), 0 0 20px rgba(99, 102, 241, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.parcours-year {
+    position: sticky;
+    top: 100px;
+}
+
+.year-badge {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border-radius: var(--radius-lg);
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--font-mono);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.year-badge.current-badge {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+}
+
+.parcours-content {
+    background: var(--bg-primary);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-lg);
+    transition: all var(--transition-base);
+}
+
+.parcours-content:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateX(8px);
+}
+
+.parcours-item.current .parcours-content {
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+.parcours-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.parcours-details {
+    flex: 1;
+}
+
+.parcours-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-primary);
+}
+
+.parcours-diploma {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.parcours-description {
+    background: var(--bg-tertiary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary);
+}
+
+.parcours-description p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+.parcours-description p:last-child {
+    margin-bottom: 0;
 }
 
 /* ========================================
@@ -1061,62 +1204,6 @@ code {
     background: var(--primary);
     color: white;
     border-color: var(--primary);
-}
-
-/* ========================================
-   SLIDER COMPETENCES
-   ======================================== */
-
-.logos-slider {
-  overflow: hidden;
-  padding: 60px 0;
-  background: transparent; 
-  white-space: nowrap;
-  position: relative;
-}
-
-.logos-slider::before,
-.logos-slider::after {
-  position: absolute;
-  top: 0;
-  width: 200px;
-  height: 100%;
-  content: "";
-  z-index: 2;
-}
-
-.logos-slider::before { left: 0; background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg-secondary)); }
-.logos-slider::after { right: 0; background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg-secondary)); }
-
-
-.logos-slide-track {
-  display: inline-block;
-  animation: scroll2 40s linear infinite;
-}
-
-
-.logos-slide-track i {
-  font-size: 100px; /* TAILLE ICI : tu peux monter à 100px si besoin */
-  margin: 0 50px;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.logos-slide-track i:hover {
-  transform: scale(1.25);
-  cursor: pointer;
-}
-
-
-@keyframes scroll2 {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-
-.logos-slider:hover .logos-slide-track {
-  animation-play-state: paused;
 }
 
 /* ========================================
@@ -2332,6 +2419,53 @@ code {
     gap: var(--spacing-xl);
 }
 
+/* Gantt Section */
+.gantt-container {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.gantt-placeholder {
+    width: 100%;
+    min-height: 400px;
+    background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+    border-radius: var(--radius-xl);
+    border: 2px dashed rgba(99, 102, 241, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2xl);
+}
+
+.placeholder-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.placeholder-icon-large {
+    font-size: 6rem;
+    opacity: 0.6;
+}
+
+.placeholder-content p {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.placeholder-note {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    background: var(--bg-tertiary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .gantt-image {
     width: 100%;
     height: auto;
@@ -2544,6 +2678,23 @@ code {
     
     .choice-content {
         padding: var(--spacing-md);
+    }
+    
+    .parcours-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .parcours-year {
+        position: static;
+    }
+    
+    .parcours-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .parcours-icon {
+        margin: 0 auto;
     }
 }
 
