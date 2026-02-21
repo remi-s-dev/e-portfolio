@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
 </head>
 <body>
     <!-- Easter Egg: Konami Code -->
@@ -22,7 +23,7 @@
         </div>
     </div>
 
-    <!-- Progress Bar -->
+    <!-- Progress Bar subtile -->
     <div class="progress-indicator">
         <div class="progress-fill" id="reading-progress"></div>
     </div>
@@ -63,7 +64,7 @@
         </div>
     </nav>
 
-    <!-- Présentation -->
+    <!-- Hero Section -->
     <section class="hero" id="top">
         <div class="container">
             <div class="hero-content">
@@ -72,10 +73,10 @@
                         Bonjour, je suis
                     </div>
                     <h1 class="hero-title">
-                        Rémi <span class="highlight">Simonetto</span> <span class="typing-cursor">|</span>
+                        Rémi <span class="highlight">Simonetto</span> <!--<span class="typing-cursor">|</span>-->
                     </h1>
                     <p class="hero-subtitle">
-                        Développeur Full-Stack | BTS SIO SLAM
+                        Développeur | BTS SIO SLAM
                     </p>
                     <p class="hero-description">
                         Passionné par l'univers informatique et le gaming, je souhaite créer des applications 
@@ -91,22 +92,6 @@
                             Me contacter
                         </a>
                     </div>
-
-                    <!-- Stats subtiles style gaming -->
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-value">5+</div>
-                            <div class="stat-label">Projets</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">2</div>
-                            <div class="stat-label">Stages</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">10+</div>
-                            <div class="stat-label">Technologies</div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="hero-visual">
@@ -119,7 +104,7 @@
                         </div>
                         <!--<div class="profile-status">
                             <span class="status-dot"></span>
-                            Disponible pour une alternance
+                            Disponible pour un stage
                         </div>-->
                     </div>
                 </div>
@@ -145,10 +130,10 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        Actuellement étudiant au lycée Turgot en <strong>BTS SIO</strong>
+                        Je suis actuellement étudiant au lycée Turgot en <strong>BTS SIO</strong>
                         (Services Informatiques aux Organisations)<strong> option SLAM</strong>
-                        (Solutions Logicielles et Applications Métiers), qui est en gros un BTS
-                         orienté développement web et applicatif.
+                        (Solutions Logicielles et Applications Métiers), qui est un BTS 
+                        orienté développement web et applicatif.
                     </p>
                     <p>
                         Mon intérêt pour l'univers du jeu vidéo m'a naturellement orienté
@@ -187,83 +172,201 @@
                         </div>
                     </div>
                 </div>
+        </div>
+    </section>
 
-                <div class="about-skills">
-                    <h3>Compétences principales</h3>
-                    
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">🐘</div>
-                            <div class="skill-info">
-                                <h4>PHP</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="--progress: 75%"></div>
-                                </div>
-                                <span class="skill-level">Avancé</span>
-                            </div>
+    <!-- BTS SIO Section -->
+    <section class="section bts-section">
+        <div class="container">
+            <span class="section-tag">// Formation</span>
+            <h2 class="section-title">BTS SIO - SLAM</h2>
+            
+            <div class="bts-content">
+                <div class="bts-intro">
+                    <h3>Le BTS Services Informatiques aux Organisations</h3>
+                    <p>
+                        Le BTS SIO est une formation de niveau Bac+2 qui prépare aux métiers de l'informatique 
+                        et du numérique. Elle se décline en deux options :
+                    </p>
+                    <div class="bts-options">
+                        <div class="bts-option">
+                            <div class="option-badge slam">SLAM</div>
+                            <h4>Solutions Logicielles et Applications Métiers</h4>
+                            <p>Développement d'applications, programmation, conception de solutions logicielles</p>
                         </div>
+                        <div class="bts-option">
+                            <div class="option-badge sisr">SISR</div>
+                            <h4>Solutions d'Infrastructure, Systèmes et Réseaux</h4>
+                            <p>Administration systèmes et réseaux, cybersécurité, infrastructure informatique</p>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">🗄️</div>
-                            <div class="skill-info">
-                                <h4>SQL</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="--progress: 80%"></div>
-                                </div>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-icon">☕</div>
-                            <div class="skill-info">
-                                <h4>Java</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="--progress: 75%"></div>
-                                </div>
-                                <span class="skill-level">Intermédiaire</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-icon">🌐</div>
-                            <div class="skill-info">
-                                <h4>HTML/CSS</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="--progress: 60%"></div>
-                                </div>
-                                <span class="skill-level">Intermédiaire</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-icon">⚡</div>
-                            <div class="skill-info">
-                                <h4>JavaScript</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="--progress: 55%"></div>
-                                </div>
-                                <span class="skill-level">Intermédiaire</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-icon">🐍</div>
-                            <div class="skill-info">
-                                <h4>Python</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="--progress:65%"></div>
-                                </div>
-                                <span class="skill-level">Intermédiaire</span>
-                            </div>
-                        </div>
+                <div class="bts-choice">
+                    <h3>Pourquoi j'ai choisi le BTS SIO option SLAM</h3>
+                    <div class="choice-content">
+                        <p>
+                            [PLACEHOLDER - À personnaliser]<br><br>
+                            
+                            Parle de ce qui t'a motivé à choisir cette formation :<br>
+                            - Ta passion pour le développement<br>
+                            - Un projet personnel qui t'a donné envie<br>
+                            - Des compétences que tu voulais acquérir<br>
+                            - Tes objectifs professionnels<br>
+                            - Ce qui te plaît dans la création d'applications<br><br>
+                            
+                            Exemple : "Passionné par le développement depuis le lycée, j'ai découvert 
+                            la programmation à travers des projets personnels. Le BTS SIO option SLAM 
+                            m'a permis de structurer mes connaissances et d'acquérir des compétences 
+                            professionnelles en développement web et logiciel..."
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Skills Section -->
+    <section class="section skills-section">
+        <div class="container">
+            <span class="section-tag">// Compétences</span>
+            <h2 class="section-title">Mes outils utilisés</h2>
 
-    <!-- Contact Section -->
+            <div class="logos-slider">
+                <div class="logos-slide-track">
+                    <i class="devicon-php-plain colored"></i>
+                    <i class="devicon-java-plain colored"></i>
+                    <i class="devicon-python-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-mysql-plain colored"></i>
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-laravel-original colored"></i>
+                    <i class="devicon-pandas-plain colored"></i>
+                    <i class="devicon-scikitlearn-plain colored"></i>
+                    <i class="devicon-streamlit-plain colored"></i>
+                    <i class="devicon-git-plain colored"></i>
+                    <i class="devicon-github-original colored"></i>
+
+                    <i class="devicon-php-plain colored"></i>
+                    <i class="devicon-java-plain colored"></i>
+                    <i class="devicon-python-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-mysql-plain colored"></i>
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-laravel-original colored"></i>
+                    <i class="devicon-pandas-plain colored"></i>
+                    <i class="devicon-scikitlearn-plain colored"></i>
+                    <i class="devicon-streamlit-plain colored"></i>
+                    <i class="devicon-git-plain colored"></i>
+                    <i class="devicon-github-original colored"></i>
+                </div>
+            </div>
+            
+            <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-php-plain colored"></i></div>
+                <div class="skill-info">
+                    <h4>PHP</h4>
+                    <span class="skill-description">Développement backend, POO</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-mysql-plain colored"></i></div>
+                <div class="skill-info">
+                    <h4>SQL</h4>
+                    <span class="skill-description">MySQL, modélisation / conception BDD</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-java-plain colored"></i></div>
+                <div class="skill-info">
+                    <h4>Java</h4>
+                    <span class="skill-description">POO</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                </div>
+                <div class="skill-info">
+                    <h4>HTML/CSS</h4>
+                    <span class="skill-description">Responsive design, animations</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-javascript-plain colored"></i></div>
+                <div class="skill-info">
+                    <h4>JavaScript</h4>
+                    <span class="skill-description">Affichages dynamiques, XSS</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-python-plain colored"></i></div>
+                <div class="skill-info">
+                    <h4>Python</h4>
+                    <span class="skill-description">Scripting, analyse de données, machine learning</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-scikitlearn-plain colored"></i></div>
+                <div class="skill-info">
+                    <h4>Scikit-Learn</h4>
+                    <span class="skill-description">Machine Learning, modèles de prédiction</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-pandas-plain colored"></i></div>
+                <div class="skill-info">
+                    <h4>Pandas</h4>
+                    <span class="skill-description">Analyse et manipulation de données (DataFrames)</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-streamlit-plain colored"></i></div>
+                <div class="skill-info">
+                    <h4>Streamlit</h4>
+                    <span class="skill-description">Dashboards</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-laravel-original colored"></i></div>
+                <div class="skill-info">
+                    <h4>Laravel</h4>
+                    <span class="skill-description">Framework PHP, MVC</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-git-plain colored"></i></div>
+                <div class="skill-info">
+                    <h4>Git</h4>
+                    <span class="skill-description">Versioning, travail collaboratif, branching</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="devicon-github-original colored"></i></div>
+                <div class="skill-info">
+                    <h4>GitHub</h4>
+                    <span class="skill-description">Hébergement de code, gestion de projets</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section id="contact" class="section contact-section">
         <div class="container">
             <div class="section-header">
@@ -306,7 +409,7 @@
                 </div>
 
                 <div class="contact-cta-card">
-                    <div class="cta-icon">🚀</div>
+                    <br><br><br><br>
                     <h3>Prêt à collaborer ?</h3>
                     <p>Je suis ouvert à toute opportunités et projets intéressants.</p>
                     <a href="mailto:remisimonetto.turgot@gmail.com" class="btn btn-primary">
@@ -334,7 +437,3 @@
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>

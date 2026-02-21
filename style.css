@@ -485,7 +485,7 @@ code {
     }
     100% {
         opacity: 0;
-        transform: translateX(-50%) translateY(12px);
+        transform: translateX(-50%) translateY(2.5px);
     }
 }
 
@@ -585,9 +585,9 @@ code {
    ABOUT SECTION
    ======================================== */
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-text p {
@@ -648,53 +648,169 @@ code {
 .skill-card {
     display: flex;
     gap: var(--spacing-md);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     background: var(--bg-secondary);
     border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all var(--transition-base);
+    align-items: center;
 }
 
 .skill-card:hover {
     border-color: var(--primary);
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
+    background: rgba(99, 102, 241, 0.05);
 }
 
 .skill-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     flex-shrink: 0;
 }
 
 .skill-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .skill-info h4 {
     font-size: 1.125rem;
-    margin-bottom: var(--spacing-xs);
+    margin: 0;
+    color: var(--text-primary);
 }
 
-.skill-bar {
-    height: 8px;
-    background: var(--bg-tertiary);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: var(--spacing-xs);
-}
-
-.skill-progress {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    width: var(--progress);
-    border-radius: 4px;
-    transition: width 1s ease-out;
-    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
-}
-
-.skill-level {
+.skill-description {
     font-size: 0.875rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* ========================================
+   SKILLS SECTION (STANDALONE)
+   ======================================== */
+.skills-section {
+    background: var(--bg-secondary);
+}
+
+.skills-section .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+/* ========================================
+   BTS SIO SECTION
+   ======================================== */
+.bts-section {
+    background: var(--bg-primary);
+}
+
+.bts-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-xl);
+}
+
+.bts-intro h3 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary);
+}
+
+.bts-intro > p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.bts-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.bts-option {
+    background: var(--bg-secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-base);
+}
+
+.bts-option:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.option-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-md);
+}
+
+.option-badge.slam {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+.option-badge.sisr {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bts-option h4 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.bts-option p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.bts-choice {
+    background: var(--bg-secondary);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--primary);
+}
+
+.bts-choice h3 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary);
+}
+
+.choice-content {
+    background: var(--bg-tertiary);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary);
+}
+
+.choice-content p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.choice-content br {
+    display: block;
+    content: "";
+    margin-top: 0.5rem;
 }
 
 /* ========================================
@@ -945,6 +1061,62 @@ code {
     background: var(--primary);
     color: white;
     border-color: var(--primary);
+}
+
+/* ========================================
+   SLIDER COMPETENCES
+   ======================================== */
+
+.logos-slider {
+  overflow: hidden;
+  padding: 60px 0;
+  background: transparent; 
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos-slider::before,
+.logos-slider::after {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos-slider::before { left: 0; background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg-secondary)); }
+.logos-slider::after { right: 0; background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg-secondary)); }
+
+
+.logos-slide-track {
+  display: inline-block;
+  animation: scroll2 40s linear infinite;
+}
+
+
+.logos-slide-track i {
+  font-size: 100px; /* TAILLE ICI : tu peux monter à 100px si besoin */
+  margin: 0 50px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logos-slide-track i:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+
+@keyframes scroll2 {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+.logos-slider:hover .logos-slide-track {
+  animation-play-state: paused;
 }
 
 /* ========================================
@@ -2361,6 +2533,18 @@ code {
         min-width: auto;
         max-width: 90%;
     }
+    
+    .bts-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .bts-choice {
+        padding: var(--spacing-lg);
+    }
+    
+    .choice-content {
+        padding: var(--spacing-md);
+    }
 }
 
 @media (max-width: 480px) {
@@ -2373,6 +2557,10 @@ code {
     }
     
     .skills-acquired {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-section .skills-grid {
         grid-template-columns: 1fr;
     }
 }

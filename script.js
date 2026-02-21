@@ -229,29 +229,13 @@ function initializeAnimations() {
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(el);
     });
-    
-    // Skill bars animation
-    animateSkillBars();
 }
 
+// Ancienne fonction d'animation des barres de compétences (désactivée)
+// Les barres de progression ne sont plus utilisées car trop subjectives
 function animateSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const bar = entry.target;
-                const progress = bar.style.getPropertyValue('--progress');
-                bar.style.width = progress;
-                observer.unobserve(bar);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    skillBars.forEach(bar => {
-        bar.style.width = '0';
-        observer.observe(bar);
-    });
+    // Fonction désactivée - les compétences utilisent maintenant des descriptions
+    return;
 }
 
 // ========================================
