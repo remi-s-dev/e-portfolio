@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Easter Egg -->
@@ -41,7 +42,7 @@
                     <span class="nav-icon">🏠</span>
                     <span>Accueil</span>
                 </a>
-                <a href="realisations.html" class="nav-link active">
+                <a href="realisations.html" class="nav-link">
                     <span class="nav-icon">💼</span>
                     <span>Réalisations</span>
                 </a>
@@ -53,7 +54,7 @@
                     <span class="nav-icon">🎯</span>
                     <span>Stages</span>
                 </a>
-                <a href="certifications.html" class="nav-link">
+                <a href="certifications.html" class="nav-link active">
                     <span class="nav-icon">📄</span>
                     <span>Certifications</span>
                 </a>
@@ -79,12 +80,124 @@
         </div>
     </section>
 
-    <!-- Cerifications Grid -->
-    <section class="section projects-section">
+    <!-- Certifications Grid -->
+    <section class="section certifications-section">
         <div class="container">
-            <div class="projects-grid">
+            <div class="certifications-grid">
                 
-                
+                <!-- Certification 1 - PIX -->
+                <article class="certification-card">
+                    <div class="certification-badge">
+                        <span class="badge-icon">🏆</span>
+                    </div>
+                    <div class="certification-image">
+                        <img src="images/pix.png" width="100%">
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Certification PIX</h3>
+                        <p class="certification-provider">PIX - Compétences numériques</p>
+                        <p class="certification-date">📅 09/02/2026</p>
+                        <p class="certification-description">
+                            Certification des compétences numériques dans 5 domaines : 
+                            information et données, communication et collaboration, création de contenu, 
+                            protection et sécurité, environnement numérique.
+                        </p>
+                        <div class="certification-meta">
+                            <span class="cert-level">Niveau : Avancé 1</span>
+                            <span class="cert-score">Score : 591/1024</span>
+                        </div>
+                        <a href="docs/certif_pix.pdf" class="btn-download" target="_blank" rel="noopener noreferrer">
+                            <span class="download-icon"><i class="fa fa-download" style="font-size:24px"></i></span>
+                            <span class="download-text">Télécharger</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Certification 2 - PCEP™ – Certified Entry-Level Python Programmer -->
+                <article class="certification-card placeholder-card">
+                    <div class="certification-badge upcoming">
+                        <span class="badge-icon">⏳</span>
+                    </div>
+                    <div class="certification-image">
+                        <img src="images/certif_pcep.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">PCEP™ – Certified Entry-Level Python Programmer</h3>
+                        <p class="certification-provider">En cours...</p>
+                        <p class="certification-date">📅 En cours...</p>
+                        <p class="certification-description">
+                            Certification officielle du Python Institute validant la maîtrise des 
+                            fondamentaux de la programmation. Elle atteste de ma capacité à concevoir des 
+                            algorithmes utilisant les structures de contrôle (boucles, conditions), la gestion des données 
+                            (conteneurs, types complexes) et la modularité via les fonctions.
+                        </p>
+                        <div class="certification-meta">
+                            <span class="cert-status upcoming">En préparation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Certification 3 - Unity - Certified User (programmer) -->
+                <article class="certification-card placeholder-card">
+                    <div class="certification-badge upcoming">
+                        <span class="badge-icon">⏳</span>
+                    </div>
+                    <div class="certification-image">
+                        <img src="images/certif_unity.png" width="100%" height="100%">
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Unity - Certified User (programmer)</h3>
+                        <p class="certification-provider">En cours ...</p>
+                        <p class="certification-date">📅 En cours ...</p>
+                        <p class="certification-description">
+                            Certification officielle validant la maîtrise du développement C# au sein de l'environnement Unity.
+                            Elle atteste de ma capacité à structurer du code, à utiliser l'API Unity de manière optimale et à
+                            résoudre des problèmes techniques complexes (debugging) pour créer des applications interactives fluides.
+                        </p>
+                        <div class="certification-meta">
+                            <span class="cert-status upcoming">En préparation</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="attestations-grid">
+                    <!-- Attestation 1 -->
+                    <div class="attestation-card">
+                        <div class="attestation-icon">📚</div>
+                        <div class="attestation-content">
+                            <h4>Cours en ligne - SecNum</h4>
+                            <p class="attestation-platform">SecNumAcademie • ANSSI • 10h</p>
+                            <p class="attestation-description">
+                                Certification de l'autorité nationale française validant la maîtrise de la cybersécurité :
+                                hygiène informatique, protection des données et sécurisation du développement.
+                            </p>
+                            <div class="attestation-footer">
+                                <span class="attestation-date">Complété le [Date]</span>
+                                <a href="#" class="btn-download compact" target="_blank" rel="noopener noreferrer">
+                                    <span class="download-icon"><i class="fa fa-download" style="font-size:24px"></i></span>
+                                    <span class="download-text">Voir</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Attestation 2 -->
+                    <div class="attestation-card">
+                        <div class="attestation-icon">📚</div>
+                        <div class="attestation-content">
+                            <h4>Cours en ligne - Elements of AI</h4>
+                            <p class="attestation-platform">ElementsOfAI • 30h</p>
+                            <p class="attestation-description">
+                                Initiation théorique et pratique à l'IA : algorithmes de recherche, probabilités et fondamentaux du
+                                Machine Learning. Un socle solide pour appréhender les enjeux de la Data Science.
+                            </p>
+                            <div class="attestation-footer">
+                                <span class="attestation-date">En cours</span>
+                                <a href="#" class="btn-download compact" target="_blank" rel="noopener noreferrer">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </section>
