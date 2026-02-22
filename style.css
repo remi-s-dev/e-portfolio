@@ -1,4 +1,20 @@
 /* ========================================
+   ANIMATION FADE-IN
+   ======================================== */
+    body {
+        animation: pageEnter 0.5s ease-out;
+    }
+
+    @keyframes pageEnter {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+/* ========================================
    CSS VARIABLES & CONFIGURATION
    ======================================== */
 :root {
@@ -485,7 +501,7 @@ code {
     }
     100% {
         opacity: 0;
-        transform: translateX(-50%) translateY(12px);
+        transform: translateX(-50%) translateY(2.5px);
     }
 }
 
@@ -585,9 +601,9 @@ code {
    ABOUT SECTION
    ======================================== */
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-text p {
@@ -959,6 +975,11 @@ code {
 /* ========================================
    CONTACT SECTION
    ======================================== */
+
+.contact-section {
+    background-color: var(--bg-primary);
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -1204,6 +1225,62 @@ code {
     background: var(--primary);
     color: white;
     border-color: var(--primary);
+}
+
+/* ========================================
+   SLIDER COMPETENCES
+   ======================================== */
+
+.logos-slider {
+  overflow: hidden;
+  padding: 60px 0;
+  background: transparent; 
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos-slider::before,
+.logos-slider::after {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos-slider::before { left: 0; background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg-secondary)); }
+.logos-slider::after { right: 0; background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg-secondary)); }
+
+
+.logos-slide-track {
+  display: inline-block;
+  animation: scroll2 40s linear infinite;
+}
+
+
+.logos-slide-track i {
+  font-size: 100px; /* TAILLE ICI : tu peux monter à 100px si besoin */
+  margin: 0 50px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logos-slide-track i:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+
+@keyframes scroll2 {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+.logos-slider:hover .logos-slide-track {
+  animation-play-state: paused;
 }
 
 /* ========================================
@@ -2329,12 +2406,24 @@ code {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.screenshots-grid {
+    display: block; 
+    columns: 2;
+    column-gap: var(--spacing-lg);
+}
+
 .screenshot-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+    
     background: var(--bg-primary);
     border-radius: var(--radius-xl);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all var(--transition-base);
+    
+    break-inside: avoid; 
 }
 
 .screenshot-item:hover {
@@ -2351,7 +2440,7 @@ code {
 
 .screenshot-placeholder {
     width: 100%;
-    height: 300px;
+    height: 200px;
     background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
     display: flex;
     flex-direction: column;
@@ -2361,38 +2450,18 @@ code {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.screenshot-item.large .screenshot-placeholder {
-    height: 400px;
+@media (max-width: 992px) {
+    .screenshots-grid {
+        columns: 2;
+    }
 }
 
-.placeholder-icon {
-    font-size: 4rem;
-    opacity: 0.6;
+@media (max-width: 768px) {
+    .screenshots-grid {
+        columns: 1;
+    }
 }
 
-.screenshot-placeholder p {
-    color: var(--text-secondary);
-    font-size: 1.125rem;
-    font-weight: 500;
-    margin: 0;
-}
-
-.screenshot-caption {
-    padding: var(--spacing-md);
-}
-
-.screenshot-caption h4 {
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary);
-}
-
-.screenshot-caption p {
-    color: var(--text-secondary);
-    margin: 0;
-}
-
-/* Back to top button */
 .back-to-top {
     display: inline-flex;
     align-items: center;
@@ -2411,12 +2480,6 @@ code {
 
 .back-to-top-icon {
     font-size: 1.2rem;
-}
-
-/* Gantt Section */
-.gantt-container {
-    display: grid;
-    gap: var(--spacing-xl);
 }
 
 /* Gantt Section */
