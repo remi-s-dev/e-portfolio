@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Easter Egg -->
@@ -68,187 +69,79 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" id="top">
         <div class="container">
-            <span class="section-tag">// Veille</span>
-            <h1 class="page-title">Veille Technologique</h1>
+            <span class="section-tag">// Veille Technologique</span>
+            <h1 class="page-title" id="top">L'IA dans le Jeu Vidéo</h1>
             <p class="page-description">
-                Ma démarche de veille et les actualités que je suis dans le domaine du développement
+                Comment l'intelligence artificielle transforme l'industrie du jeu vidéo
             </p>
         </div>
     </section>
 
-    <!-- Themes Section -->
-    <section class="section themes-section">
+    <!-- Introduction Section -->
+    <section class="section intro-veille-section">
         <div class="container">
-            <h2 class="section-title">Thématiques suivies</h2>
-            <div class="themes-grid">
-                <div class="theme-card">
-                    <div class="theme-icon">🤖</div>
-                    <h3>Intelligence Artificielle</h3>
-                    <p>IA, Machine Learning et leurs applications en développement</p>
+            <div class="intro-content">
+                <h2 class="section-title">L'évolution de l'industrie du jeu vidéo à l'ère de l'IA</h2>
+                
+                <div class="intro-text">
+                    <p>
+                        L'industrie du jeu vidéo traverse une révolution technologique sans précédent avec l'avènement 
+                        de l'intelligence artificielle générative. Ce qui était autrefois un processus créatif 
+                        entièrement humain se transforme progressivement avec l'intégration d'outils d'IA capables de 
+                        générer des textures, des modèles 3D, des animations, et même du code.
+                    </p>
+                    
+                    <p>
+                        Des studios AAA aux développeurs indépendants, tous explorent les possibilités offertes par 
+                        ces technologies : génération procédurale de contenu, amélioration des workflows de production, 
+                        création de dialogues dynamiques via des PNJ intelligents, ou encore optimisation des pipelines 
+                        artistiques. L'IA promet d'accélérer la production, de réduire les coûts et d'ouvrir de 
+                        nouvelles possibilités créatives.
+                    </p>
+                    
+                    <p>
+                        Cependant, cette évolution soulève des questions cruciales : quelle place reste-t-il pour la 
+                        créativité humaine ? Comment préserver l'authenticité artistique tout en adoptant ces nouveaux 
+                        outils ? Les développeurs et artistes s'inquiètent légitimement de voir leur métier transformé, 
+                        voire menacé, par ces technologies.
+                    </p>
                 </div>
-                <div class="theme-card">
-                    <div class="theme-icon">🔒</div>
-                    <h3>Cybersécurité</h3>
-                    <p>Sécurité des applications et protection des données</p>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-icon">☁️</div>
-                    <h3>Cloud & DevOps</h3>
-                    <p>Technologies cloud, conteneurs et automatisation</p>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-icon">⚡</div>
-                    <h3>Frameworks Web</h3>
-                    <p>Nouvelles tendances et frameworks modernes</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Articles Section -->
-    <section class="section articles-section">
-        <div class="container">
-            <h2 class="section-title">Articles récents</h2>
-            
-            <div class="articles-list">
-                <!-- Article 1 -->
-                <article class="article-card">
-                    <div class="article-date">
-                        <span class="date-day">15</span>
-                        <span class="date-month">Jan</span>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-category ai">IA</span>
-                            <span class="article-read-time">5 min de lecture</span>
-                        </div>
-                        <h3 class="article-title">L'évolution des modèles de langage en 2025</h3>
-                        <p class="article-excerpt">
-                            Analyse des nouvelles capacités des LLM et leur impact sur le développement 
-                            logiciel. Comment ces outils transforment notre façon de coder.
+                <div class="problematique-card">
+                    <div class="problematique-icon"></div>
+                    <div class="problematique-content">
+                        <h3>Problématique de ma veille</h3>
+                        <p class="problematique-question">
+                            Comment s'assurer que l'inévitable intégration des outils d'IA au sein des studios de 
+                            développement de jeux vidéo soit un <strong>levier d'optimisation technique</strong> sans 
+                            pour autant se substituer à la <strong>singularité de la création artistique humaine</strong> ?
                         </p>
-                        <div class="article-footer">
-                            <span class="article-source">🔗 OpenAI Blog</span>
-                            <a href="#" class="article-link">Lire l'article →</a>
-                        </div>
                     </div>
-                </article>
-
-                <!-- Article 2 -->
-                <article class="article-card">
-                    <div class="article-date">
-                        <span class="date-day">08</span>
-                        <span class="date-month">Jan</span>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-category security">Sécurité</span>
-                            <span class="article-read-time">8 min de lecture</span>
-                        </div>
-                        <h3 class="article-title">Vulnérabilités critiques détectées</h3>
-                        <p class="article-excerpt">
-                            Découverte de failles de sécurité majeures dans plusieurs bibliothèques JavaScript. 
-                            Recommandations et bonnes pratiques pour sécuriser vos projets.
-                        </p>
-                        <div class="article-footer">
-                            <span class="article-source">🔗 Security Weekly</span>
-                            <a href="#" class="article-link">Lire l'article →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="article-card">
-                    <div class="article-date">
-                        <span class="date-day">02</span>
-                        <span class="date-month">Jan</span>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-category cloud">Cloud</span>
-                            <span class="article-read-time">6 min de lecture</span>
-                        </div>
-                        <h3 class="article-title">Kubernetes : Nouveautés 2025</h3>
-                        <p class="article-excerpt">
-                            Tour d'horizon des nouvelles fonctionnalités de Kubernetes et leur impact 
-                            sur l'orchestration de conteneurs et la scalabilité.
-                        </p>
-                        <div class="article-footer">
-                            <span class="article-source">🔗 Kubernetes Blog</span>
-                            <a href="#" class="article-link">Lire l'article →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 4 -->
-                <article class="article-card">
-                    <div class="article-date">
-                        <span class="date-day">28</span>
-                        <span class="date-month">Déc</span>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-category web">Web</span>
-                            <span class="article-read-time">10 min de lecture</span>
-                        </div>
-                        <h3 class="article-title">React vs Vue : Comparatif 2025</h3>
-                        <p class="article-excerpt">
-                            Analyse comparative des deux frameworks majeurs. Performances, écosystème, 
-                            et critères de choix pour vos nouveaux projets.
-                        </p>
-                        <div class="article-footer">
-                            <span class="article-source">🔗 Dev.to</span>
-                            <a href="#" class="article-link">Lire l'article →</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sources Section -->
-    <section class="section sources-section">
-        <div class="container">
-            <h2 class="section-title">Mes sources</h2>
-            <div class="sources-grid">
-                <div class="source-card">
-                    <div class="source-icon">📰</div>
-                    <h4>Blogs & Sites</h4>
-                    <ul>
-                        <li>Dev.to</li>
-                        <li>Medium</li>
-                        <li>Smashing Magazine</li>
-                        <li>CSS-Tricks</li>
-                    </ul>
                 </div>
-                <div class="source-card">
-                    <div class="source-icon">🎥</div>
-                    <h4>Vidéos & Podcasts</h4>
-                    <ul>
-                        <li>YouTube (Fireship, Traversy)</li>
-                        <li>Syntax.fm</li>
-                        <li>Tech Talks</li>
-                    </ul>
-                </div>
-                <div class="source-card">
-                    <div class="source-icon">🐦</div>
-                    <h4>Réseaux Sociaux</h4>
-                    <ul>
-                        <li>Twitter/X (Dev Tech)</li>
-                        <li>LinkedIn</li>
-                        <li>Reddit (r/programming)</li>
-                    </ul>
-                </div>
-                <div class="source-card">
-                    <div class="source-icon">📧</div>
-                    <h4>Newsletters</h4>
-                    <ul>
-                        <li>JavaScript Weekly</li>
-                        <li>Python Weekly</li>
-                        <li>Hacker News Digest</li>
-                    </ul>
+
+                <div class="objectifs-grid">
+                    <div class="objectif-item">
+                        <span class="objectif-icon"></span>
+                        <h4>Comprendre</h4>
+                        <p>Les technologies d'IA utilisées dans le game development</p>
+                    </div>
+                    <div class="objectif-item">
+                        <span class="objectif-icon"></span>
+                        <h4>Analyser</h4>
+                        <p>L'équilibre entre automatisation et créativité humaine</p>
+                    </div>
+                    <div class="objectif-item">
+                        <span class="objectif-icon"></span>
+                        <h4>Préserver</h4>
+                        <p>L'identité artistique et l'authenticité des créations</p>
+                    </div>
+                    <div class="objectif-item">
+                        <span class="objectif-icon"></span>
+                        <h4>Anticiper</h4>
+                        <p>Les évolutions futures du métier de game developer</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -257,34 +150,246 @@
     <!-- Methodology Section -->
     <section class="section methodology-section">
         <div class="container">
-            <h2 class="section-title">Ma méthodologie</h2>
-            <div class="methodology-content">
-                <div class="method-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h4>Collecte quotidienne</h4>
-                        <p>Consultation de mes sources principales chaque matin (30 minutes)</p>
+            <h2 class="section-title">Ma méthodologie de veille</h2>
+            
+            <div class="methodology-grid">
+                <!-- Méthode Pull -->
+                <div class="method-card">
+                    <div class="method-header">
+                        <span class="method-icon"></span>
+                        <h3>Méthode Pull</h3>
+                        <p class="method-subtitle">Recherche active d'informations</p>
+                    </div>
+                    
+                    <div class="method-content">
+                        <h4>Sites spécialisés</h4>
+                        <ul class="sources-list">
+                            <li><a href="https://80.lv" target="_blank">80.lv</a> - Techniques de production 3D</li>
+                            <li><a href="https://gamedeveloper.com" target="_blank">GameDeveloper</a></li>
+                            <li><a href="https://aigamechangers.com" target="_blank">AI Gamechangers</a></li>
+                            <li><a href="https://aiandgames.com" target="_blank">AI and Games</a></li>
+                            <li><a href="https://nvidia.com/games" target="_blank">NVIDIA Games Blog</a></li>
+                        </ul>
+                        
+                        <h4>Réseaux sociaux</h4>
+                        <ul class="sources-list">
+                            <li><strong>YouTube</strong> - Chaînes spécialisées game dev et IA</li>
+                            <li><strong>Reddit</strong> - r/gamedev, r/IndieGameDev, r/AIGameDev</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="method-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h4>Sélection et tri</h4>
-                        <p>Identification des articles pertinents selon mes thématiques de veille</p>
+
+                <!-- Méthode Push -->
+                <div class="method-card">
+                    <div class="method-header">
+                        <span class="method-icon"></span>
+                        <h3>Méthode Push</h3>
+                        <p class="method-subtitle">Réception automatisée d'informations</p>
+                    </div>
+                    
+                    <div class="method-content">
+                        <h4>Flux RSS (Feedly)</h4>
+                        <ul class="sources-list">
+                            <li>80.lv</li>
+                            <li>GameDeveloper</li>
+                            <li>PC Gamer</li>
+                            <li>VentureBeat Gaming</li>
+                        </ul>
+                        
+                        <h4>Newsletters</h4>
+                        <ul class="sources-list">
+                            <li><strong>AI and Games</strong></li>
+                            <li><strong>Game File</strong></li>
+                            <li><strong>MobileGamer.biz</strong></li>
+                            <li><strong>BrutallyHonest</strong></li>
+                            <li><strong>GameDiscover.co</strong></li>
+                            <li><strong>Gus & Co</strong></li>
+                        </ul>
+                        
+                        <h4>Outils automatisés</h4>
+                        <ul class="sources-list">
+                            <li><strong>Google Alerts</strong> - Mots-clés ciblés</li>
+                            <li><strong>Perplexity Tasks</strong> - Synthèses automatiques</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="method-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h4>Analyse approfondie</h4>
-                        <p>Lecture détaillée et prise de notes sur les sujets importants</p>
+            </div>
+
+            <!-- Process -->
+            <div class="process-timeline">
+                <h3>Mon processus de veille</h3>
+                <div class="timeline-steps">
+                    <div class="timeline-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Collecte</h4>
+                            <p>Consultation des flux RSS et newsletters et alertes</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Tri et sélection</h4>
+                            <p>Identification des articles pertinents selon ma problématique</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Analyse approfondie</h4>
+                            <p>Lecture détaillée des articles choisis</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Archivage Excel</h4>
+                            <p>Référencement dans un tableau de suivi avec métadonnées</p>
+                        </div>
                     </div>
                 </div>
-                <div class="method-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h4>Archivage & Partage</h4>
-                        <p>Sauvegarde personnelle et partage avec ma communauté d'apprentissage</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="section articles-section">
+        <div class="container">
+            <h2 class="section-title">Articles récents analysés</h2>
+            
+            <div class="articles-list">
+                <!-- Article 1 - EA IA -->
+                <article class="article-card">
+                    <div class="article-date">
+                        <span class="date-day">29</span>
+                        <span class="date-month">Oct.<br>2025</span>
+                        
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category security">Critique</span>
+                        </div>
+                        <h3 class="article-title">Battlefield, Les Sims : comment l'IA rend fous les salariés d'EA</h3>
+                        <p class="article-excerpt">
+                            Electronic Arts intègre une IA (ReefGPT) dans la plupart de ses secteurs (créatif, dev, 
+                            conseils…) et cela alourdit la charge de travail des employés à cause de la production 
+                            de code erroné & d'hallucinations. Pire encore, les créatifs sont invités à directement
+                            entraîner les modèles IA sur leurs propres travaux.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-source">🔗 01net</span>
+                            <a href="https://www.01net.com/actualites/battlefield-les-sims-comment-lia-rend-fous-les-salaries-dea.html" 
+                               target="_blank" class="article-link">Lire l'article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 - Larian transparence -->
+                <article class="article-card">
+                    <div class="article-date">
+                        <span class="date-day">17</span>
+                        <span class="date-month">Déc.<br>2025</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category ai">Transparence</span>
+                        </div>
+                        <h3 class="article-title">Larian clarifies studio is not replacing concept artists with AI</h3>
+                        <p class="article-excerpt">
+                            Le CEO de Larian Studios (Baldur's Gate 3) clarifie la position du studio sur l'IA : 
+                            un outil d'assistance pour les artistes, pas un remplacement. L'importance cruciale de 
+                            la transparence dans l'utilisation de l'IA en game development.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-source">🔗 GamesIndustry.biz</span>
+                            <a href="https://www.gamesindustry.biz/larian-ceo-clarifies-studio-is-not-replacing-concept-artists-with-ai" 
+                               target="_blank" class="article-link">Lire l'article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 - Danger IA -->
+                <article class="article-card">
+                    <div class="article-date">
+                        <span class="date-day">03</span>
+                        <span class="date-month">Nov.<br>2025</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category security">Emploi</span>
+                        </div>
+                        <h3 class="article-title">AI advancement in gaming zone leaves creators in fear of career risk</h3>
+                        <p class="article-excerpt">
+                            Les développeurs de jeux face à l'inquiétude : l'IA menace-t-elle réellement leurs 
+                            carrières ? Analyse des risques professionnels et des compétences à développer pour 
+                            rester pertinent dans l'industrie.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-source">🔗 The News</span>
+                            <a href="https://www.thenews.com.pk/latest/1355495-ai-advancement-in-gaming-zone-leaves-creators-in-fear-of-career-risk" 
+                               target="_blank" class="article-link">Lire l'article →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Download Excel Button -->
+            <div class="download-section">
+                <div class="download-card">
+                    <div class="download-icon-large"></div>
+                    <h3>Tableau complet de ma veille</h3>
+                    <p>
+                        Accédez à l'ensemble des articles que j'ai répertoriés et analysés dans un tableau Excel 
+                        structuré avec métadonnées (date, source, résumé, pertinence).
+                    </p>
+                    <a href="docs/veille.xlsx" download class="btn-download">
+                        <span class="download-icon"><i class="fa fa-download" style="font-size:24px"></i></span>
+                        <span class="download-text">Télécharger le tableau Excel</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="section conclusion-veille-section">
+        <div class="container">
+            <div class="conclusion-card-veille">
+                <h2 class="section-title">Conclusion & Réflexions</h2>
+                
+                <div class="conclusion-content-veille">
+                    <div class="conclusion-text">
+                        <p>
+                            Ma veille technologique sur l'IA dans le jeu vidéo révèle une industrie en pleine mutation, 
+                            et qui est à l'origine de nombreux débats. Doit-on privilégier l'innovation technique ou la
+                            préservation artistique ? Ces outils d'IA relèvent des questions éthiques dans bien des
+                            secteurs, et celui de la création de jeux-vidéos n'en est pas exempt.
+                        </p>
+                        
+                        <p>
+                            Selon moi, l'exemple de <strong>Larian Studios</strong> démontre qu'il est possible d'adopter l'IA de 
+                            manière responsable : l'utiliser comme un outil d'assistance et d'expérimentation plutôt que de
+                            remplacement. À l'inverse, les tensions chez <strong>EA</strong> illustrent les dangers d'une intégration 
+                            mal maîtrisée qui dégrade les conditions de travail et génère de l'anxiété chez les créateurs.
+                        </p>
+                        
+                        <p>
+                            L'enjeu principal reste de <strong>trouver l'équilibre</strong> : comment automatiser les tâches 
+                            répétitives sans déshumaniser le processus créatif ? Comment garantir que l'IA amplifie les 
+                            capacités des artistes plutôt que de les remplacer ? La réponse passe sans doute par la 
+                            <strong>transparence</strong>, la <strong>formation continue</strong> des professionnels, et 
+                            une réflexion éthique sur l'usage de ces technologies.
+                        </p>
+                    </div>
+
+                    <div class="final-thought">
+                        <p>
+                            <strong>Mon positionnement :</strong> L'IA doit être envisagée comme un <em>outil</em> 
+                            permettant non seulement de <em> gagner en productivité</em> mais également <em>d'amplifier la
+                            créativité humaine</em>, et non pas comme un substitut. Les studios qui réussiront seront ceux qui 
+                            sauront combiner l'efficacité technique de l'IA avec la vision artistique irremplaçable de 
+                            leurs équipes créatives.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -295,7 +400,11 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Portfolio - Tous droits réservés</p>
+                <p>&copy; 2026 Portfolio - Tous droits réservés - Rémi Simonetto</p>
+                <a href="#top" class="back-to-top">
+                    <span class="back-to-top-icon">⬆️</span>
+                    Revenir en haut
+                </a>
                 <p class="easter-egg-hint">
                     <span class="hint-icon">🎮</span>
                     Psst... Essaye le Konami Code
