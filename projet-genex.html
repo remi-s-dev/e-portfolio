@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet GenEx - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-indicator">
+        <div class="progress-fill" id="reading-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Portfolio</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    <span>Accueil</span>
+                </a>
+                <a href="realisations.html" class="nav-link active">
+                    <span class="nav-icon">💼</span>
+                    <span>Réalisations</span>
+                </a>
+                <a href="veille.html" class="nav-link">
+                    <span class="nav-icon">📡</span>
+                    <span>Veille</span>
+                </a>
+                <a href="stages.html" class="nav-link">
+                    <span class="nav-icon">🎯</span>
+                    <span>Stages</span>
+                </a>
+                <a href="certifications.html" class="nav-link">
+                    <span class="nav-icon">📄</span>
+                    <span>Certifications</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header du Projet -->
+    <section class="project-hero" id="top">
+        <div class="container">
+            <a href="realisations.html" class="back-link">
+                ← Retour aux projets
+            </a>
+            
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <h1 class="project-hero-title">Projet GenEx</h1>
+                    <p class="project-hero-subtitle">
+                        Générateur & Correcteur d'Exercices pédagogiques automatisé basé sur l'IA Google Gemini
+                    </p>
+
+                    <div class="tech-stack-hero">
+                        <span class="tech-badge-hero">Python 3</span>
+                        <span class="tech-badge-hero">Flask</span>
+                        <span class="tech-badge-hero">Gemini API</span>
+                        <span class="tech-badge-hero">Bootstrap 5</span>
+                        <span class="tech-badge-hero">Render</span>
+                    </div>
+
+                    <!-- Lien d'accès direct au site déployé -->
+                    <div class="project-actions" style="margin-top: 25px;">
+                        <a href="https://genex-mo7l.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-live-project" style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px; background-color: #0d6efd; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; font-family: 'Inter', sans-serif; box-shadow: 0 4px 6px rgba(13, 110, 253, 0.15); transition: all 0.2s ease-in-out;">
+                            <span style="font-size: 1.2rem;">🌐</span>
+                            <span>Visiter le site en ligne</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="section screenshots-section">
+        <div class="container">
+            <h2 class="section-title">
+                Aperçu de l'Application
+            </h2>
+            
+            <div class="screenshots-grid">
+                <div class="screenshot-item large">
+                    <img src="images/img_genex_generer_form.png" alt="Formulaire du module Générateur">
+                    <div class="screenshot-caption">
+                        <h4>Module Générateur - Saisie</h4>
+                        <p>Interface de configuration (Matière, Niveau, Précisions) pour créer un sujet</p>
+                    </div>
+                </div>
+                
+                <div class="screenshot-item large">
+                    <img src="images/img_genex_generer_resultat.png" alt="Sujet d'exercice généré">
+                    <div class="screenshot-caption">
+                        <h4>Module Générateur - Résultat</h4>
+                        <p>Affichage du sujet formaté prêt pour l'impression ou le téléchargement Word</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-item large">
+                    <img src="images/img_genex_corriger_form.png" alt="Formulaire du module Correcteur">
+                    <div class="screenshot-caption">
+                        <h4>Module Correcteur - Upload</h4>
+                        <p>Interface d'envoi pour soumettre un fichier d'exercices au format .docx</p>
+                    </div>
+                </div>  
+
+                <div class="screenshot-item large">
+                    <img src="images/img_genex_correction_resultat.png" alt="Correction détaillée de l'IA">
+                    <div class="screenshot-caption">
+                        <h4>Module Correcteur - Évaluation</h4>
+                        <p>Affichage du correctif détaillé, de la note sur 20 et des axes d'amélioration</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section class="section project-overview">
+        <div class="container">
+            <h2 class="section-title">
+                Cahier des Charges Fonctionnel
+            </h2>
+            <iframe src="docs/cahier_des_charges_GenEx.pdf" width="100%" height="1200px"></iframe>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Portfolio - Tous droits réservés - Rémi Simonetto</p>
+                <a href="#top" class="back-to-top">
+                    <span class="back-to-top-icon">⬆️</span>
+                    Revenir en haut
+                </a>
+                <p class="easter-egg-hint">
+                    <span class="hint-icon">🎮</span>
+                    Psst... Essaye le Konami Code
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
